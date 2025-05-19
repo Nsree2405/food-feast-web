@@ -1,0 +1,24 @@
+
+body{
+    background-image: url('/pics/q.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+p{
+    background-color:blueviolet;
+    font-size: large; 
+    color: white;
+}
+h1{
+    text-align:center;
+    color:darkred;
+}
+p.a{ 
+  word-spacing: 500px;
+}
+th, td {
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-left: 24px;
+    padding-right: 24px;
+}

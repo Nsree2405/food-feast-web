@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>INDIAN</title>
+  <link rel="stylesheet" href="styles2.css">
+</head>
+<style>
+thead {color: green;font-size: 26px;}
+tbody {color: blue;font-size: 26px;}
+table, th, td {border: 2px solid red;}
+</style>
+<body>
+  <strong>    
+    <h1>INDIAN CUSINE</h1>
+    <pre><p class="a"> Appetizers Meals Desserts</p></pre> 
+    <table>
+      <thead>
+        <tr>
+          <th>s.no</th>
+          <th>items</th> 
+          <th>cost</th>
+          <th>s.no</th>
+          <th>items</th> 
+          <th>cost</th>
+          <th>s.no</th>
+          <th>items</th> 
+          <th>cost</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>1.</th>
+          <th>Corn pakoda</th>
+          <th>Rs.50</th>
+          <th>1.</th>
+          <th>Non veg meal set</th>
+          <th>Rs.800</th>
+          <th>1.</th>
+          <th>Gulab Jamun</th>
+          <th>Rs.30</th>
+        </tr>
+        <tr>
+          <th>2.</th>
+          <th>Onion pakoda</th>
+          <th>Rs.30</th>
+          <th>2.</th>
+          <th>Chicken Tikka Masala</th>
+          <th>Rs.400</th>
+          <th>2.</th>
+          <th>Gajar ka Halwa</th>
+          <th>Rs.50</th>
+        </tr>
+        <tr>
+          <th>3.</th>
+          <th>Cabbage pakoda</th>
+          <th>Rs.40</th>
+          <th>3.</th>
+          <th>Butter chicken</th>
+          <th>Rs.450</th>
+          <th>3.</th>
+          <th>Rasgulla</th>
+          <th>Rs.40</th>
+        </tr>
+        <tr>
+          <th>4.</th>
+          <th>Panner pakoda</th>
+          <th>Rs.50</th>
+          <th>4.</th>
+          <th>Tandoori Chicken</th>
+          <th>Rs.400</th>
+          <th>4.</th>
+          <th>Falooda</th>
+          <th>Rs.60</th>
+        </tr>
+        <tr>
+          <th>5.</th>
+          <th>Masala vada</th>
+          <th>Rs.60</th>
+          <th>5.</th>
+          <th>Naatu Kodi pulusu</th>
+          <th>Rs.500</th>
+          <th>5.</th>
+          <th>Kulfi</th>
+          <th>Rs.40</th>
+        </tr>
+        <tr>
+          <th>6.</th>
+          <th>Papdi chat</th>
+          <th>Rs.30</th>
+          <th>6.</th>
+          <th>veg meal set</th>
+          <th>Rs.700</th>
+          <th>6.</th>
+          <th>Kheer</th>
+          <th>Rs.50</th>
+        </tr>
+        <tr>
+          <th>7.</th>
+          <th>Samosa</th>
+          <th>Rs.30</th>
+          <th>7.</th>
+          <th>Aloo Gobi</th>
+          <th>Rs.200</th>
+          <th>7.</th>
+          <th>Ras Malai</th>
+          <th>Rs.50</th>
+        </tr>
+        <tr>
+          <th>8.</th>
+          <th>Dahi puri</th>
+          <th>Rs.50</th>
+          <th>8.</th>
+          <th>Palak Paneer</th>
+          <th>Rs.250</th>
+          <th>8.</th>
+          <th>Jalebi</th>
+          <th>Rs.30</th>
+        </tr>
+        <tr>
+          <th>9.</th>
+          <th>Bhel puri</th>
+          <th>Rs.40</th>
+          <th>9.</th>
+          <th>Chole Bhature</th>
+          <th>Rs.200</th>
+          <th>9.</th>
+          <th>Soan Papdi</th>
+          <th>Rs.40</th>
+        </tr>
+        <tr>
+          <th>10.</th>
+          <th>Gobi 65</th>
+          <th>Rs.100</th>
+          <th>10.</th>
+          <th>Paneer Butter masala</th>
+          <th>Rs.250</th>
+          <th>10.</th>
+          <th>Shrikhand</th>
+          <th>Rs.30</th>
+        </tr>
+      </tbody>
+    </table>
+    </strong>
+
+    <script>
+      // Function to add item to cart
+      function addToCart(item, price) {
+        let cart = JSON.parse(localStorage.getItem('cart')) || {};
+        cart[item] = cart[item] ? cart[item] + 1 : 1;
+        localStorage.setItem('cart', JSON.stringify(cart));
+      }
+    </script>
+    
+</body>
+</html>

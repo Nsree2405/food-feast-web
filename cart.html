@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Cart</title>
+</head>
+<body>
+  <h1>Your Cart</h1>
+  <ul id="cart-items"></ul>
+  <p>Total: <span id="cart-total"></span></p>
+
+  <!-- Script to display cart items -->
+  <script>
+    // Retrieve cart data from local storage
+    let cart = JSON.parse(localStorage.getItem('cart')) || {};
+
+    // Display cart items
+    const cartItems = document.getElementById('cart-items');
+    let total = 0;
+    for (const item in cart) {
+      const listItem = document.createElement('li');
+      listItem.textContent = `${item} x${cart[item]}`;
+      cartItems.appendChild(listItem);
+      // Calculate total price
+      total += getPriceOfItem(item) * cart[item];
+    }
+    document.getElementById('cart-total').textContent = total.toFixed(2);
+
+    // Function to get the price of an item (You need to implement this)
+    function getPriceOfItem(item) {
+      // You need to implement this function to retrieve the price of the item from your database or elsewhere
+      // For simplicity, I'm returning a random price here
+      const prices = {
+        'Corn pakoda': 50,
+        'Non veg meal set': 800,
+        // Add more item-price pairs here
+      };
+      return prices[item] || 0; // Return 0 if price not found
+    }
+  </script>
+</body>
+</html>
