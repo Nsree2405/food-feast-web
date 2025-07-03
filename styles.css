@@ -1,71 +1,188 @@
-body{
-  background-color:rgb(246, 165, 206);
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  background: #fff;
 }
-p{
-  font-size: large;
+
+.hero {
+  background-image: url('pics/straw.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-h1{
-    font-size: 300%; 
-    font-family: veradana; 
-    font-style: italic;
-    text-align: center;
-    color: blueviolet;
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5%;
+  border-radius: 50%;
+  text-align: center;
+  color: white;
 }
-h2{
-    text-align: center;
-    color:rgb(144, 36, 36);
-}   
-div.container {
-  text-align:right;
+
+.overlay h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
 }
-ul.myUL {
-  display: inline-block;
-  text-align: left;
-} 
-/* Style the navigation menu */
+
+.overlay h2 {
+  font-size: 1.5rem;
+}
+
+.overlay sub {
+  font-size: 0.8rem;
+  color: deeppink;
+}
+
+.cart-btn {
+  background-color: white;
+  border: none;
+  padding: 10px;
+  font-size: 20px;
+  margin-top: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
 .navbar {
-    width: 100%;
-    background-color: #555;
-    overflow: auto;
-  }
-  
-  /* Navigation links */
-  .navbar a {
-    float: left;
-    padding: 12px;
-    color: white;
-    text-decoration: none;
-    font-size: 17px;
-    width: 23%; /* Four equal-width links. If you have two links, use 50%, and 33.33% for three links, etc.. */
-    text-align: center; /* If you want the text to be centered */
-  }
-  
-  /* Add a background color on mouse-over */
-  .navbar a:hover {
-    background-color: #000;
-  }
-  
-  /* Style the current/active link */
-  .navbar a.active {
-    background-color: #04AA6D;
-  }
-  
-  /* Add responsiveness - on screens less than 500px, make the navigation links appear on top of each other, instead of next to each other */
-  @media screen and (max-width: 500px) {
-    .navbar a {
-      float: none;
-      display: block;
-      width: 100%;
-      text-align: left; /* If you want the text to be left-aligned on small screens */
-    }
-  }
-.cart-container{
-  position: top,right;
-  height: 30px;
-  width: 30px;
+  display: flex;
+  justify-content: center;
+  background-color: #333;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+   width: 100%; 
+  z-index: 1000; /* Keeps it above other content */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
-  .link{
-    position:fixed;
-    top: 0;
-    right: 0;
-  }
+
+.navbar a {
+  color: white;
+  padding: 12px 20px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  background-color: #6a6a6a;
+  border-radius: 5px;
+}
+a{
+  text-decoration:none;
+}
+.menu-section {
+  padding: 40px 20px;
+  background: #fff5f5;
+  text-align: center;
+}
+
+.menu-section h2 {
+  font-size: 2.5rem;
+  color: #ff4d4d;
+  margin-bottom: 20px;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  padding: 20px;
+  width: 150px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.card img {
+  width: 80px;
+  height: 80px;
+}
+
+.card p {
+  font-weight: bold;
+  color: #333;
+  margin-top: 10px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.feedback {
+  text-align: center;
+  margin: 30px;
+  font-size: 18px;
+  color: #444;
+}
+
+.feedback img {
+  width: 35px;
+  vertical-align: middle;
+  margin-left: 8px;
+}
+
+.footer {
+  text-align: center;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+  font-family: Arial, sans-serif;
+}
+
+.footer a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+/* Popup container */
+.popup {
+  display: none;
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+  background-color: white;
+  padding: 20px;
+  border: 2px solid #333;
+  border-radius: 10px;
+  z-index: 1000;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Inside the popup */
+.popup-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Input field */
+#search-input {
+  padding: 10px;
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Close button */
+#close-popup {
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}

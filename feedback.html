@@ -1,69 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Feedback</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta charset="UTF-8">
+  <title>Feedback - FoodFeast</title>
+  <style>
+body {
+  background-color: #fef6e4; /* Soft ivory */
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+  color: #4a3e25;
+  text-align: center;
+  padding: 70px;
+  margin: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  background-color: #fff176; /* Soft pastel yellow */
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  left:0;
+  width: 95%;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.navbar a {
+  color: #4a3e25;
+  padding: 12px 20px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+  background-color: #ffd001;
+  border-radius: 5px;
+}
+
+h1 {
+  /* font-size: 2.6rem;
+  margin-bottom: 20px; */
+  color: #d89e00;
+}
+
+h2 {
+  /* font-size: 1.4rem;
+  margin-bottom: 15px; */
+  color: #5c4a20;
+}
+
+.feedback-section {
+  margin: 30px auto;
+  max-width: 700px;
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(247, 213, 85, 0.15);
+}
+
+.feedback-options,
+.rating-options {
+  margin: 15px 0;
+}
+
+label {
+  display: inline-block;
+  margin: 10px;
+  color: #3d3d3d;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  accent-color: #fdd835; /* Golden yellow */
+  transform: scale(1.2);
+  margin-right: 6px;
+}
+
+.submit-button {
+  padding: 12px 25px;
+  background-color: #fbc02d;
+  border: none;
+  font-size: 16px;
+  border-radius: 8px;
+  color: #4a3e25;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #f9a825;
+}
+
+.thank-img {
+  margin-top: 40px;
+  width: 180px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+
+  </style>
 </head>
-<style>
-img{
-    display: block;
-    width: 18%;
-    margin: auto;
-} 
-</style>
-<body style="text-align: center;">
+<body>
+  <div class="navbar">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Menu</a>
+    <a href="#">Contact</a>
+  </div>
 
-    <h1 style="font-size:50px;">Thank you for having a great blast!!!</h1>
+  <h1>Thank you for having a great blast!!!</h1>
 
-    <br>
+  <div class="feedback-section">
+    <h2>Care to give us a feedback???</h2>
+    <div class="feedback-options">
+      <label><input type="checkbox" name="feedback" value="Good service"> Good service</label>
+      <label><input type="checkbox" name="feedback" value="Yummy food"> Yummy food</label>
+      <label><input type="checkbox" name="feedback" value="Lovely atmosphere"> Lovely atmosphere</label>
+      <label><input type="checkbox" name="feedback" value="Reasonable price"> Reasonable price</label>
+      <label><input type="checkbox" name="feedback" value="Perfect menu"> Perfect menu</label>
+    </div>
+  </div>
 
-    <h2 style=" text-align: center;">Care to give us a feedback???</h2>
+  <div class="feedback-section">
+    <h2>Rate us by stellas — your stars for our night!!!</h2>
+    <div class="rating-options">
+      <label><input type="radio" name="stars" value="⭐"> ⭐</label>
+      <label><input type="radio" name="stars" value="⭐⭐"> ⭐⭐</label>
+      <label><input type="radio" name="stars" value="⭐⭐⭐"> ⭐⭐⭐</label>
+      <label><input type="radio" name="stars" value="⭐⭐⭐⭐"> ⭐⭐⭐⭐</label>
+      <label><input type="radio" name="stars" value="⭐⭐⭐⭐⭐"> ⭐⭐⭐⭐⭐</label>
+    </div>
+  </div>
 
-    <label for="feedback"></label>
+  <button class="submit-button" onclick="sendFeedback()">Submit Feedback</button>
 
-    <input type="radio" name="Good service" id="feedback">
-    <label for="feedback">Good service</label>
+  <br><br>
+  <img src="pics/thankyou.png" alt="Thank You" class="thank-img">
 
-    <input type="radio" name="yummy food" id="feedback">
-    <label for="feedback">yummy food</label>
+  <script>
+    function sendFeedback() {
+      const feedbacks = document.querySelectorAll('input[name="feedback"]:checked');
+      const stars = document.getElementsByName("stars");
 
-    <input type="radio" name="lovely atmosphere" id="feedback">
-    <label for="feedback">lovely atmosphere</label>
+      let selectedFeedback = Array.from(feedbacks).map(cb => cb.value).join(", ");
+      let selectedStars = "";
 
-    <input type="radio" name="reasonable price" id="feedback">
-    <label for="feedback">reasonable price</label>
+      for (let s of stars) {
+        if (s.checked) {
+          selectedStars = s.value;
+          break;
+        }
+      }
 
-    <input type="radio" name="perfect menu" id="feedback">
-    <label for="feedback">perfect menu</label>
+      if (!selectedFeedback || !selectedStars) {
+        alert("Please select at least one feedback option and a star rating.");
+        return;
+      }
 
-    <br><br>
+      const subject = "Feedback from FoodFeast";
+      const body = `Feedback: ${selectedFeedback}%0D%0AStars: ${selectedStars}`;
+      const mailtoLink = `mailto:your_email@example.com?subject=${subject}&body=${body}`;
 
-    <h2 style=" text-align: center;">Rate us by stellas-your stars for our night!!!</h2>
-    
-    <input type="radio" name="1star" id="rate us">
-    <label for="feedback"><i style="font-size:24px" class="fa">&#xf006;</i></label>
-    
-    <input type="radio" name="2star" id="rate us">
-    <label for="feedback"><i style="font-size:24px" class="fa">&#xf006;</i><i style="font-size:24px" class="fa">&#xf006;</i></label>
-    
-    <input type="radio" name="3star" id="rate us">
-    <label for="feedback"><i style="font-size:24px" class="fa">&#xf006;</i><i style="font-size:24px" class="fa">&#xf006;</i><i style="font-size:24px" class="fa">&#xf006;</i></label>
-    
-    <input type="radio" name="4star" id="rate us">
-    <label for="feedback"><i style="font-size:24px" class="fa">&#xf006;</i><i style="font-size:24px" class="fa">&#xf006;</i><i style="font-size:24px" class="fa">&#xf006;</i><i style="font-size:24px" class="fa">&#xf006;</i></label>
-    
-    <input type="radio" name="5star" id="rate us">
-    <label for="feedback"><i style="font-size:24px" class="fa">&#xf006;</i><i style="font-size:24px" class="fa">&#xf006;</i><i 
-    style="font-size:24px" class="fa">&#xf006;</i><i style="font-size:24px" class="fa">&#xf006;</i><i style="font-size:24px" class="fa">&#xf006;</i></label>
-    
-    <br><br>
-    
-    <img src="pics\thankyou.png" alt="THANK YOU">
-    
-    <h1>Do visit us again....</h1>
+      window.location.href = mailtoLink;
+    }
+  </script>
 
 </body>
 </html>

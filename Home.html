@@ -1,124 +1,67 @@
+<!-- Save this as index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FOOD PLATFORM</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FOOD PLATFORM</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="dish.png">
 </head>
-<style>
-  body{
-  background-image: url('pics/straw.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-.head-container{
-}
-.link{
-    text-decoration: none;
-}
-</style>
-<body>
-    <div class="head-container">
-    <h1>Restaurant Website</h1>
-    <a class="link" href="cart.html" target="_blank" width="100px";> <button style="font-size: 50px;"><i class="fa fa-shopping-cart" style="font-size:30px;color: fuchsia;" ></i></button> </a>
-    </div>
-    <h2>FOOD FEAST!!<sub  style="font-size: 70%; font-family: geneva; color:deeppink;  text-align:right;">Grab a byte...</sub></h1>
-    
-    <div class="navbar">
-        <a class="active" href="Home.html">Home</a> 
-        <a href="#">Search</a> 
-        <a href="contact.html" target="_blank">Contact</a> 
-        <a href="about.html" target="_blank">About</a>
-      </div>
-      
-    <div class="container">
 
-    <ul style="color:black; font-size: 18px;" class="myUL">
-
-        <h2 style="font-size: 200%; color: rgb(255, 105, 105);"><b>Food Genre:</b></h2>
-
-        <li><a href="menus/INDIAN.html" target="_blank";><button style="font-size: 15px;"><i>Indian</i></button> <img alt="India" src="pics\india.png" style="float:right;width:10%;"></a></li>
-        <br>
-
-        <li><a href="menus/KOREAN.html" target="_blank";><button style="font-size: 15px;"><i>Korean</i></button> <img alt="Korea" src="pics\korea.png" style="float:right;width:10%;"></a></li>
-        <br>
-
-        <li><a href="menus/JAPANESE.html" target="_blank";><button style="font-size:15px;"><i>Japanese</i></button> <img alt="Japan" src="pics\japan.png" style="float:right;width:10%;"></a></li>
-        <br>
-
-        <li><a href="menus/CHINESE.html" target="_blank";><button style="font-size:15px;"><i>Chinese</i></button> <img alt="China" src="pics\china.png" style="float:right;width:10%;"></a></li>
-        <br>
-
-        <li><a href="menus/THAI.html" target="_blank";><button style="font-size:15px;"><i>Thai</i></button> <img alt="Thai" src="pics\thai.png" style="float:right;width:10%;"></a></li>
-        <br>
-
-        <li><a href="menus/ITALIAN.html" target="_blank";><button style="font-size:15px;"><i>Italian</i></button> <img alt="Italy" src="pics\italy.png" style="float:right;width:10%;"></a></li>
-        <br>
-
-        <li><a href="menus/MEXICAN.html" target="_blank";><button style="font-size:15px;"><i>Mexican</i></button> 
-        <img alt="Mexico" src="pics\mexico.png" style="float:right;width:10%;"></a></li>
-        <br>
-
-        <li><a href="menus/AMERICAN.html" target="_blank";><button style="font-size:15px;"><i>American</i></button>
-        <img alt="America" src="pics\america.png" style="float:right;width:10%;"></a></li>
-        <br>
-
-        <li><a href="menus/FRENCH.html" target="_blank";><button style="font-size:15px;"><i>French</i></button> <img alt="France" src="pics\france.png" style="float:right;width:10%;"></a></li>
-        <br>
-
-        <li><a href="menus/DRINKS.html" target="_blank";><button style="font-size:15px;"><i>DRINKS</i></button>
-        <br>
-
-        <b style="font-size: 20px; color: red;">Give us a Smile if you like the food >>>></b> <a href="feedback.html" target="_blank" style="font-size: 20px;"><img src="pics\smiley.png" alt="Smile!!!" style="width:35px;height:35px;"></a>
-
-    </ul>
-    <!-- <div class="cart-container" id="cart-container">
-      <h3>Your Cart</h3>
-      <ul id="cart-items"></ul>
-      <p class="total">Total: <span id="cart-total">0</span></p>
-      <button onclick="checkout()">Checkout</button>
-  </div> -->
+    <div id="search-popup" class="popup">
+  <div class="popup-content">
+    <input type="text" id="search-input" placeholder="Search for a menu item..." />
+    <button id="close-popup">&times;</button>
   </div>
+  </div>
+<body>
+    <nav class="navbar">  
+    <a class="active" href="Home.html">Home</a>
+    <a href="#" id="search-btn">Search</a>
+    <a href="contact.html" target="_blank">Contact</a>
+    <a href="about.html" target="_blank">About</a>
+    <a href="feedback.html" target="_blank">Feedback</a>
+    </nav>
+  <header class="hero">
+    <div class="overlay">
+      <!-- <h1>Restaurant Website</h1> -->
+      <h1>FOOD FEAST!! <sub>Grab a byte...</sub></h1>
+    </div>
+  </header>
 
-  <!-- <script>
-    let cart = {};
+  <!-- Menu Section -->
+  <section class="menu-section">
+    <h2>Food Genre</h2>
+    <div class="cards">
+      <div class="card"><a href="menus/INDIAN.html" target="_blank" ><img src="pics/india.png"/><p>Indian</p></a></div>
+      <div class="card"><a href="menus/KOREAN.html" target="_blank"><img src="pics/korea.png"/><p>Korean</p></a></div>
+      <div class="card"><a href="menus/JAPANESE.html" target="_blank"><img src="pics/japan.png"/><p>Japanese</p></a></div>
+      <div class="card"><a href="menus/CHINESE.html" target="_blank"><img src="pics/china.png"/><p>Chinese</p></a></div>
+      <div class="card"><a href="menus/THAI.html" target="_blank"><img src="pics/thai.png"/><p>Thai</p></a></div>
+      <div class="card"><a href="menus/ITALIAN.html" target="_blank"><img src="pics/italy.png"/><p>Italian</p></a></div>
+      <div class="card"><a href="menus/MEXICAN.html" target="_blank"><img src="pics/mexico.png"/><p>Mexican</p></a></div>
+      <div class="card"><a href="menus/AMERICAN.html" target="_blank"><img src="pics/america.png"/><p>American</p></a></div>
+    </div>
+  </section>
 
-    function addToCart(item) {
-        if (cart[item]) {
-            cart[item]++;
-        } else {
-            cart[item] = 1;
-        }
-        updateCart();
-    }
+  <!-- Smile Feedback -->
+  <section class="feedback">
+    <p>Give us a Smile if you like the food → 
+      <a href="feedback.html" target="_blank"><img src="pics/smiley.png" alt="Smile" /></a>
+    </p>
+  </section>
 
-    function updateCart() {
-        const cartItems = document.getElementById('cart-items');
-        const cartTotal = document.getElementById('cart-total');
-        cartItems.innerHTML = '';
-        let total = 0;
-        for (const item in cart) {
-            const listItem = document.createElement('li');
-            listItem.textContent = `${item} x${cart[item]}`;
-            cartItems.appendChild(listItem);
-            total += parseFloat(document.getElementById(`price-${item}`).textContent) * cart[item];
-        }
-        cartTotal.textContent = total.toFixed(2);
-    }
-
-    function toggleCart() {
-        const cartContainer = document.getElementById('cart-container');
-        cartContainer.style.display = cartContainer.style.display === 'block' ? 'none' : 'block';
-    }
-
-    function checkout() {
-        alert('Checkout functionality would be implemented here.');
-        <a href="cart.html" target="_blank" ><button style="font-size:15px;"><i>cart</i></button></a>
-        // You can implement actual checkout functionality here, like sending data to server, etc.
-    }
-</script> -->
+  <!-- Footer -->
+<footer class="footer">
+  <p>
+    &copy; @foodfeast &nbsp;|&nbsp; 
+    <a href="about.html" target="_blank">About</a> &nbsp;|&nbsp; 
+    <a href="contact.html" target="_blank">Contact</a> &nbsp;|&nbsp; 
+    <a href="feedback.html" target="_blank">Feedback</a>
+  </p>
+</footer>
 
 </body>
+<script src="homescript.js"></script>
 </html>

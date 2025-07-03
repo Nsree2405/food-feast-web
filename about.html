@@ -1,66 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About us</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us</title>
+  <style>
+    body {
+  background-color: #eafaf1; /* Soft mint green */
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+  margin: 0;
+  padding-top: 70px;
+  text-align: center;
+  color: #2f3e46;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  background-color: #3b7d61; /* Deep teal */
+  padding: 15px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar a {
+  color: #fff;
+  padding: 12px 20px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+  background-color: #589d82; /* Lighter green */
+  border-radius: 5px;
+}
+
+h1, h2 {
+  color: #386641; /* Forest green */
+}
+
+.about-section p {
+  color: #555;
+  font-size: 1.1rem;
+  margin: 10px 0;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.column {
+  flex: 1 1 300px;
+  max-width: 300px;
+  margin: 15px;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.container h2 {
+  color: #2b463c; /* Dark muted green */
+}
+
+.title {
+  color: #7a7a7a;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.button {
+  padding: 10px 20px;
+  background-color: #3b7d61;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #2f6650;
+}
+
+.card .container p {
+  color: #444;
+  font-size: 14px;
+}
+
+.timing-section {
+  max-width: 500px;
+  margin: 40px auto;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  padding: 25px;
+}
+
+.timing-section h2 {
+  color: #2d5944;
+  margin-bottom: 10px;
+}
+
+.timing-section p {
+  color: #4d4d4d;
+  font-size: 1rem;
+}
+  </style>
 </head>
-<style>
-    h1 {color: blueviolet;}
-    p   {color: red;} 
-</style>
-<body style="text-align: center; background-color:rgb(169, 238, 238) ;">
-    <h1>ABOUT US</h1>
-    <div class="about-section">
-        <p>A little info about who we are and what we do.</p>
-        <p>Hope you enjoy our web service.</p>
-      </div>
-      
-      <h2 style="text-align:center">Our Team</h2>
-      <div class="row">
-        <div class="column">
-          <div class="card">
-            <div class="container">
-              <h2>Navya sree</h2>
-              <p class="title">Team lead</p>
-              <p>The one who got this idea and made it upto here!!!</p>
-              <p>nsree@.com</p>
-              <p><button class="button">Contact</button></p>
-            </div>
-          </div>
-        </div>
-      
-        <div class="column">
-          <div class="card">
-            <div class="container">
-              <h2>Kalyani</h2>
-              <p class="title">Team mate</p>
-              <p>The one who brought this idea into reality %%%</p>
-              <p>kalyani@.com</p>
-              <p><button class="button">Contact</button></p>
-            </div>
-          </div>
-        </div>
-      
-        <div class="column">
-          <div class="card">
-            <div class="container">
-              <h2>Keerthi</h2>
-              <p class="title">Team mate</p>
-              <p>The one who supported idea and made it work $$$</p>
-              <p>Keerthi@.com</p>
-              <p><button class="button">Contact</button></p>
-            </div>
-          </div>
-        </div>
-      </div>
+
+<body>
+  <div class="navbar">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Menu</a>
+    <a href="#">Contact</a>
+  </div>
+
+  <h1>ABOUT US</h1>
+  <div class="about-section">
+    <p>A little info about who we are and what we do.</p>
+    <p>Hope you enjoy our web service.</p>
+  </div>
+
+  <h2>Our Team</h2>
+  <div class="row">
+    <div class="column">
       <div class="card">
         <div class="container">
-          <h1 style="color: blueviolet;">Timings</h2>
-          <p style="color:black;">Mon-Sat: 9:00 AM to 9:00 PM</p>
-          <p style="color: black;">Sun: 11:00 AM to 10:00 AM</p>
+          <h2>Navya Sree</h2>
+          <p class="title">Team Lead</p>
+          <p>The one who got this idea and made it up to here!</p>
+          <p>nsree@.com</p>
+          <p><button class="button">Contact</button></p>
         </div>
       </div>
+    </div>
 
+    <div class="column">
+      <div class="card">
+        <div class="container">
+          <h2>Kalyani</h2>
+          <p class="title">Team Mate</p>
+          <p>The one who brought this idea into reality %%%</p>
+          <p>kalyani@.com</p>
+          <p><button class="button">Contact</button></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="card">
+        <div class="container">
+          <h2>Keerthi</h2>
+          <p class="title">Team Mate</p>
+          <p>The one who supported the idea and made it work $$$</p>
+          <p>keerthi@.com</p>
+          <p><button class="button">Contact</button></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="timing-section">
+    <h2>Timings</h2>
+    <p>Mon - Sat: 9:00 AM to 9:00 PM</p>
+    <p>Sun: 11:00 AM to 10:00 AM</p>
+  </div>
 </body>
 </html>

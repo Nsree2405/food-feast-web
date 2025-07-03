@@ -1,35 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
-    <title>Contact us</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us</title>
+  <style>
+    body {
+  background-color: #eaf4fc; /* Soft light blue background */
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+  margin: 0;
+  padding-top: 80px;
+  color: #2c3e50;
+  text-align: center;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: center;
+  background-color: #549dd3; /* Calm blue */
+  padding: 15px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.navbar a {
+  color: white;
+  padding: 12px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+  background-color: #76b7e9;
+  border-radius: 5px;
+}
+
+/* Headings */
+h1 {
+  color: #2c5883;
+  /* margin-bottom: 10px; */
+}
+
+h2 {
+  color: #356c99;
+  /* margin-top: 20px; */
+}
+
+/* Text content */
+p {
+  color: #4d5c6b;
+  /* font-size: 1.1rem; */
+  margin: 10px auto;
+  max-width: 700px;
+}
+
+/* Links */
+a {
+  color: #1e6fa7;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a:hover {
+  color: #114d7d;
+  text-decoration: underline;
+}
+
+/* Image */
+img {
+  display: block;
+  width: 220px;
+  margin: 30px auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+  </style>
 </head>
-<style>
-body{
-    background-color:rgb(246, 246, 154)
-}
-p,h2,h1{
-    text-align: center;
-    color:crimson;
-}
-img{
-    display: block;
-    width: 24%;
-    margin: auto;
-}
-</style>
 <body>
-    <h1>CONTACT US</h1>
-    <h2>Want to know more about food feast???</h2>
-    <p style="font-size: large;"><b>MAIL</b> Here:<a href="nsree1912@gmail.com">@foodfeast#</a></p>
-    <P>LINKEDIN:<a href="MMM">food*platform|<(")>|</a></P>
-    <p>INSTAGRAM:<a href="MMM">Follow us on insta$$$</a></p>
-    <br>
-    <h2>LOCATION:</h2>
-    <p>G-MAPS:<a href="GOOgle maps"> #yummy#food@here</a></p>
-    <img src="pics\tnku.jpeg" alt="THANK YOU">
-    <h2 style="text-align: center;">WE WOULD LIKE YOUR VISIT</h2>
+
+  <div class="navbar">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Menu</a>
+    <a href="#">Contact</a>
+  </div>
+
+  <h1>CONTACT US</h1>
+  <h2>Want to know more about Food Feast?</h2>
+
+  <p><strong>MAIL:</strong> <a href="mailto:nsree1912@gmail.com">nsree1912@gmail.com</a></p>
+  <p><strong>LinkedIn:</strong> <a href="#">FoodFeast on LinkedIn</a></p>
+  <p><strong>Instagram:</strong> <a href="#">@foodfeast_official</a></p>
+
+  <br>
+
+  <h2>LOCATION</h2>
+  <p><strong>Google Maps:</strong> <a href="#">Find us here</a></p>
+
+  <img src="pics/tnku.jpeg" alt="Thank You">
+
+  <h2>We would love your visit!</h2>
+
 </body>
 </html>
