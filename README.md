@@ -7,7 +7,13 @@ Foodfeast ~Grab a byte
 - Search for menus in Home page.
 - Simple Frontend to attract users.
 # how to run?
-  > pull the repo.
-  > cd food-feast-web
-  > run live server
+''sh
+# Step 1: Clone the repository using the project's Git URL.
+git clone https://github.com/Nsree2405/food-feast-web
+
+# Step 2: Navigate to the project directory.
+cd <food-feast-web>
+
+# Step 3: Run code.
+live server
     
